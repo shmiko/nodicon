@@ -13,7 +13,7 @@ const mimeTypes = {
 	"css":"text/css"
 }
 
-http.createServer(function(){
+http.createServer(function(req,res){
 	var uri = url.parse(req.url).pathname;
 	var filename = path.join(process.cwd(), unescape(uri));
 	console.log('Loading', uri);
