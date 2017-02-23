@@ -1,0 +1,19 @@
+{
+  "name": "nodicon",
+  "version": "1.0.0",
+  "description": "basic node app",
+  "main": "nserver.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shmiko/nodicon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shmiko/nodicon/issues"
+  },
+  "homepage": "https://github.com/shmiko/nodicon#readme"
+}
