@@ -34,6 +34,17 @@ http.createServer(function(){
 
 		var fileStream = fs.createReadStream(fileName);
 		fileStream.pipe(res);
+	} else if(stats.isDirectory()){
+		res.writeHead(303, {
+			'Location': 'index.html'
+		});
+		res.end;
+	} else{
+		res.writeHead(500,{'Content-type':'text/plain'});
+		res.write('500 Internal Error\n');
+		res.end();
 	}
-});
+
+
+}).listen(3000);
 
