@@ -12,14 +12,13 @@ const mimeTypes = {
 	"js":"text/javascript",
 	"css":"text/css"
 }
-// const hostname = '127.0.0.1';
-// const port = 3000;
 
-// const server = http.createServer((req, res) => {
-//   res.statusCode = 200;
-//   res.setHeader('Content-Type', 'text/plain');
-//   res.end('Yello World\n');
-// });
+http.createServer(function(){
+	var uri = url.parse(req.url).pathname;
+	var filename = path.join(process.cwd(), unescape(uri));
+	console.log('Loading', uri);
+	var stats;
+});
 
 // server.listen(port, hostname, () => {
 //   console.log(`Server running at http://${hostname}:${port}/`);
