@@ -18,8 +18,14 @@ http.createServer(function(){
 	var filename = path.join(process.cwd(), unescape(uri));
 	console.log('Loading', uri);
 	var stats;
+
+	try{
+		stats = fs.lstatSync(filename);
+	} catch(e){
+		res.writeHead(404, {'content-type': 'text/plain'});
+		res.wrie('404 Not Found');
+		res.end();
+		return;
+	}
 });
 
-// server.listen(port, hostname, () => {
-//   console.log(`Server running at http://${hostname}:${port}/`);
-// });
