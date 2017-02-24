@@ -20,7 +20,7 @@ http.createServer(function(req,res){
 	var stats;
 
 	try{
-		stats = fs.lstatSync(filename);
+		stats = fs.lstatSync(fileName);
 	} catch(e){
 		res.writeHead(404, {'content-type': 'text/plain'});
 		res.write('404 Not Found');
